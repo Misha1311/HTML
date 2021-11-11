@@ -1,0 +1,109 @@
+body{
+  background-image: url(wave-haikei.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.modalbutton{
+  background-color: #ff8906;
+  color: #fffffe;
+  border: 1px solid #fffffe;
+  font-size: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.modalbutton:hover{
+  border: 2px solid #fffffe;
+}
+
+@keyframes slidein {
+    from {
+      opacity: 0%;
+    }
+  
+    to {
+      opacity: 100%;
+    }
+    
+  }
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Оставаться на месте */
+    z-index: 1; /* Сидеть на вершине */
+    padding-top: 100px; /* Расположение коробки */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включите прокрутку, если это необходимо */
+    background-color: rgb(0,0,0); /* Цвет запасной вариант  */
+    background-color: rgba(0,0,0,0.4); /*Черный с непрозрачностью */
+    animation-duration: 2s;
+    animation-name: slidein;
+  }
+  
+  /* Модальное содержание */
+  .modal-content {
+    background-color: #ff8906;
+    font-size: 40px;
+    border: 2px solid #fffffe;
+    width: 20%; 
+    margin: 0 auto; 
+    padding: 0px 20px ;
+  }
+  
+  /* Кнопка закрытия */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #272343;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+p{
+  color:#fffffe;
+}
+
+.saveButton{
+  background-color: #ff8906;
+  color: #fffffe;
+  border: 1px solid #fffffe;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.closeButton{
+  background-color: #ff8906;
+  color: #fffffe;
+  border: 1px solid #fffffe;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.buttongroup{
+  text-align: right;
+}
+
+.saveButton:hover{
+  border: 2px solid #fffffe;
+}
+
+.closeButton:hover{
+  border: 2px solid #fffffe;
+}
