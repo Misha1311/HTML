@@ -31,7 +31,7 @@ $menu.addEventListener('mousedown', function(e) {
     action = true;
 });
 
-window.addEventListener('mouseup', function(e) {
+$menu.addEventListener('mouseup', function(e) {
     action = false;
     save = coords.distance;
     if (coords.distance >= -200 || coords.distance == 0) {
@@ -40,19 +40,21 @@ window.addEventListener('mouseup', function(e) {
         $panel.style.cssText = 'transform: translateX(' + -350 + 'px)';
         save = -350;
     }
+    console.log(save);
 });
 
-window.addEventListener('mousemove', function(e) {
+$menu.addEventListener('mousemove', function(e) {
     if (action) {
         coords.currentCoords = e.clientX;
         coords.distance = save + coords.currentCoords - coords.startCoords;
         coords.distance = (coords.distance >= 0) ? 0 : coords.distance;
         coords.distance = (coords.distance <= -350) ? -350 : coords.distance;
-        boxController(coords)
+        boxController(coords);
     }
     
     // if (coords.distance <= -300){
     //     document.getElementById('text').innerHTML="≡";
+
     // }
     // else if (coords.distance >= -300) {
     //     document.getElementById('text').innerHTML="&#10006;";  
