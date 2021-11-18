@@ -1,9 +1,8 @@
 let $panel = document.querySelector('.panel');
 let $menu = document.querySelector('.menu');
 let $openbutton = document.querySelector('.openbutton');
+let $closebutton = document.querySelector('.closebutton');
 let action = false;
-let actionOpen = false;
-let count = 0;
 let coords = {
     distance: 0,
     startCoords: 0,
@@ -15,26 +14,16 @@ function boxController(coords) {
     $panel.style.cssText = 'transform: translateX(' + coords.distance + 'px)';
 }
 
-function open(count){
-    if (count % 2 == 0)
-    {  
-        actionOpen = true;
-    }
-    else{
-        actionOpen = false;
-    }
-    if (!!actionOpen){
-        $panel.style.cssText = 'transform: translateX(' + 0 + 'px)';
-    }
-    else{
-        $panel.style.cssText = 'transform: translateX(' + -350 + 'px)';
-    }
-    console.log(count);
-}
-
 $openbutton.addEventListener('click', function(e){
-    count++;
-    open(count);
+    $openbutton.style.visibility = 'hidden';
+    $closebutton.style.visibility = 'visible';
+    $panel.style.cssText = 'transform: translateX(' + 0 + 'px)';
+});
+
+$closebutton.addEventListener('click', function(e){
+    $openbutton.style.visibility = 'visible';
+    $closebutton.style.visibility = 'hidden';
+    $panel.style.cssText = 'transform: translateX(' + -350 + 'px)';
 });
 
 $menu.addEventListener('mousedown', function(e) {
@@ -62,10 +51,10 @@ window.addEventListener('mousemove', function(e) {
         boxController(coords)
     }
     
-    if (coords.distance <= -300){
+    /*if (coords.distance <= -300){
         document.getElementById('text').innerHTML="≡";
     }
     else if (coords.distance >= -300) {
         document.getElementById('text').innerHTML="&#10006;";  
-    }
+    }*/
 });

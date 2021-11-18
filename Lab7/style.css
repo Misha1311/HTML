@@ -25,6 +25,20 @@ body{
     width: 100vw;
 }
 .openbutton{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    background-color: #f582ae;
+    color: #001858;
+    border: 1px solid #fec7d7;
+    font-size: 15px;
+}
+.closebutton{
+    position: absolute;
+    top: 0;
+    right: 0;
     float: right;
     height: 50px;
     width: 50px;
@@ -32,6 +46,7 @@ body{
     color: #001858;
     border: 1px solid #fec7d7;
     font-size: 15px;
+    visibility: hidden;
 }
 .info{
     color: #172c66;
