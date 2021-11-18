@@ -50,4 +50,11 @@ window.addEventListener('mousemove', function(e) {
         coords.distance = (coords.distance <= -350) ? -350 : coords.distance;
         boxController(coords)
     }
+    
+    // if (coords.distance <= -300){
+    //     document.getElementById('text').innerHTML="≡";
+    // }
+    // else if (coords.distance >= -300) {
+    //     document.getElementById('text').innerHTML="&#10006;";  
+    // }
 });
