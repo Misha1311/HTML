@@ -1,0 +1,47 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-image: url(wave-haikei.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.panel{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 400px;
+    transform: translateX(-350px);
+    background-color: #8bd3dd;
+}
+.menu{
+    height: 100vh;
+    width: 100vw;
+}
+.openbutton{
+    float: right;
+    height: 50px;
+    width: 50px;
+    background-color: #f582ae;
+    color: #001858;
+    border: 1px solid #fec7d7;
+    font-size: 15px;
+}
+.info{
+    color: #172c66;
+    font-size: 40px;
+}
+h1{
+    color: #172c66;
+    text-align: center;
+}
+li {
+    list-style-type: none; 
+    padding: 0px 0px 5px 25px;
+}
