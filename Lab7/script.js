@@ -40,7 +40,7 @@ $menu.addEventListener('mouseup', function(e) {
         $panel.style.cssText = 'transform: translateX(' + -350 + 'px)';
         save = -350;
     }
-    console.log(save);
+    console.log(e.target);
 });
 
 $menu.addEventListener('mousemove', function(e) {
